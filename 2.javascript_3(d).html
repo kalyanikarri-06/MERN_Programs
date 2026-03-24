@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Output Methods
+        </title>
+    </head>
+    <body>
+        <h2>
+            JavaScript Output Methods
+        </h2>
+        <p id="demo"> turtufftrfuttf</p>
+        <button onclick="showOutput()">Click Me</button>
+        <script>
+            function showOutput(){
+                //1.alert box
+                alert("This is an alert message!");
+                // write on the webpage
+                document.getElementById("demo").innerHTML ="This is written on the webpage.";
+                //console output
+                console.log("This is written in the console.");
+                //4.document write (safe demo inside a new window)
+                let win = window.open("","","width=300,height=200");
+                win.document.write("This text is from document.write ()");
+
+            }
+        </script>
+    </body>
+</html>

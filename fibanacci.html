@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+
+    <h2>Fibonacci Series</h2>
+
+    Enter number of terms:
+    <input type="number" id="num">
+    <br><br>
+
+    <button onclick="fibonacci()">Generate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function fibonacci() {
+            let n = document.getElementById("num").value;
+            let a = 0, b = 1, c;
+            let output = "";
+
+            for (let i = 1; i <= n; i++) {
+                output += a + " ";
+                c = a + b;
+                a = b;
+                b = c;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Fibonacci Series: " + output;
+        }
+    </script>
+
+</body>
+</html>
